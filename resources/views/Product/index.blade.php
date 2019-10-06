@@ -34,11 +34,12 @@
 					@else
 					<div class="card-header bg-dark">
 					@endif
-						<h2 class="text-white">{{ $paket_pulsa->nama_paket }}</h2>
+						<h2 class="text-white">{{ $paket_pulsa->nama_paket }}</h2>						
 						<input type="hidden" name="nmPaket" id="Gold" value="{{ $paket_pulsa->nama_paket }}">
 					</div>
-					<div class="card-body card-danger">					
-						<h5 class="card-title">{{ $paket_pulsa->harga_paket }}<hr></h5>
+					<div class="card-body card-danger">			
+						<!-- {{$tmpHarga = number_format($paket_pulsa->harga_paket,2,",",".")}}					 -->
+						<h5 class="card-title">Rp. {{ number_format($paket_pulsa->harga_paket,2,",",".") }}/bulan<hr></h5>
 						<input type="hidden" name="harga" id="harga" value="{{ $paket_pulsa->harga_paket }}">							
 						<div class="card-text ml-1">
 							<p>{{ $paket_pulsa->pesan}}</p>							
@@ -49,51 +50,6 @@
 			<!-- </form> -->
 		</div>
 		@endforeach
-
-
-		<!-- <div class="col-sm-4">
-			<form method="POST" action="{{ url('/Product/beli')}}">
-			@csrf
-				<div class="card">			
-					<div class="card-header bg-secondary">
-						<h2 class="text-white">Silver</h2>
-						<input type="hidden" name="nmPaket" id="Silver" value="Silver">
-					</div>
-					<div class="card-body card-secondary">					
-						<h5 class="card-title">Rp. 500.000 /bln<hr></h5>
-						<input type="hidden" name="harga" id="harga" value="500000">							
-						<div class="card-text ml-1">
-							<p> Gratis sms ke sesama</p>
-							<p> Kuota 4G 80 GB</p>
-							<p> Gratis telpon 24 jam</p>
-							<button type="submit" class="btn btn-danger">Beli Paket</button>
-						</div>
-					</div>
-				</div>
-			</form>
-		</div>
-
-		<div class="col-sm-4">
-			<form method="POST" action="{{ url('/Product/beli')}}">
-			@csrf
-				<div class="card">			
-					<div class="card-header bg-dark">
-						<h2 class="text-white">Platinum</h2>
-						<input type="hidden" name="nmPaket" id="Platinum" value="Platinum">
-					</div>
-					<div class="card-body card-dark">					
-						<h5 class="card-title">Rp. 1000.000 /bln<hr></h5>
-						<input type="hidden" name="harga" id="harga" value="1000000">						
-						<div class="card-text ml-1">
-							<p> Gratis sms ke semua operator</p>
-							<p> Kuota 4G 350 GB</p>
-							<p> Gratis telpon 24 jam</p>
-							<button type="submit" class="btn btn-danger">Beli Paket</button>
-						</div>
-					</div>
-				</div>
-			</form>
-		</div> -->
 
 	</div>
 
