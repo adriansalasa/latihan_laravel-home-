@@ -27,7 +27,13 @@
 			<!-- <form method="POST" action="{{ url('/Product/beli')}}"> -->
 				@csrf
 				<div class="card">			
+					@if ($paket_pulsa->nama_paket === 'Gold')
 					<div class="card-header bg-warning">
+					@elseif ($paket_pulsa->nama_paket === 'Silver')
+					<div class="card-header bg-secondary">
+					@else
+					<div class="card-header bg-dark">
+					@endif
 						<h2 class="text-white">{{ $paket_pulsa->nama_paket }}</h2>
 						<input type="hidden" name="nmPaket" id="Gold" value="{{ $paket_pulsa->nama_paket }}">
 					</div>
