@@ -1,0 +1,86 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\paket_pulsa;
+use Illuminate\Http\Request;
+
+class productController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+       $paket_pulsas = paket_pulsa::all();
+       return view('Product.index', compact('paket_pulsas'));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\paket_pulsa  $paket_pulsa
+     * @return \Illuminate\Http\Response
+     */
+    public function show(paket_pulsa $paket_pulsa)
+    {
+        return view('Product.beli', compact('paket_pulsa'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\paket_pulsa  $paket_pulsa
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(paket_pulsa $paket_pulsa)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\paket_pulsa  $paket_pulsa
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, paket_pulsa $paket_pulsa)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\paket_pulsa  $paket_pulsa
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(paket_pulsa $paket_pulsa)
+    {
+        //
+    }
+}
