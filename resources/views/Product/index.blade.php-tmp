@@ -31,7 +31,7 @@
 						<h2 class="text-white">{{ $paket_pulsa->nama_paket }}</h2>
 						<input type="hidden" name="nmPaket" id="Gold" value="{{ $paket_pulsa->nama_paket }}">
 					</div>
-					<div class="card-body card-warning">
+					<div class="card-body card-danger">
 						<h5 class="card-title">{{ $paket_pulsa->harga_paket }}<hr></h5>
 						<input type="hidden" name="harga" id="harga" value="{{ $paket_pulsa->harga_paket }}">
 						<div class="card-text ml-1">
